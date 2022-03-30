@@ -1,0 +1,8 @@
+./pgadmin
+./pgdata
+./order-service/.idea
+./order-service/target
+./order-service/.mvn
+./payment-service/target
+./payment-service/.idea
+./payment-service/.mvn
