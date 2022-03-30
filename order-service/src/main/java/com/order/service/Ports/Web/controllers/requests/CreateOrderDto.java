@@ -9,7 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class CreateOrderRequest {
+public class CreateOrderDto {
     private String name;
     private String status;
     private Float amount;

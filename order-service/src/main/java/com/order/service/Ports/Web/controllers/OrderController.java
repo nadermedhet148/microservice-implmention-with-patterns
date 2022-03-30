@@ -1,7 +1,9 @@
 package com.order.service.Ports.Web.controllers;
 
-import com.order.service.Ports.Messages.Producer;
-import com.order.service.Ports.Web.controllers.requests.CreateOrderRequest;
+import com.order.service.Aapplication.services.OrderService;
+import com.order.service.Domain.Events.OrderCreatedEvent;
+import com.order.service.infrastructure.EventProducers.Producer;
+import com.order.service.Ports.Web.controllers.requests.CreateOrderDto;
 import com.order.service.Domain.models.Order;
 import com.order.service.infrastructure.repositories.IOrderRepository;
 import lombok.AllArgsConstructor;
@@ -24,15 +26,11 @@ public class OrderController {
 
 
 
+
     @PostMapping(value = "")
-    public Order createOrder(@RequestBody CreateOrderRequest body){
-        Order order = new Order();
-        order.setAmount(body.getAmount());
-        order.setName(body.getName());
-        order.setStatus("PENDING");
-        this.OrderRepository.save(order);
-        producer.sendMessage(order);
-        return order;
+    public Order createOrder(@RequestBody CreateOrderDto body){
+        OrderService orderService = new OrderService(this.OrderRepository , this.producer);
+        return orderService.createOrder(body);
     }
 
 }
