@@ -1,0 +1,29 @@
+{
+  "namespace": "com.order.service",
+  "type": "record",
+  "name": "OrderRecord",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "avro.java.string": "String"
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "avro.java.string": "String"
+    },
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "paymentId",
+      "type": "int"
+    },
+    {
+      "name": "amount",
+      "type": "float"
+    }
+  ]
+}
