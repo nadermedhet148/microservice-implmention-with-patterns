@@ -1,0 +1,11 @@
+{
+  "namespace": "com.inventory.service",
+  "type": "record",
+  "name": "OrderQuantityIsNotAvailableRecord",
+  "fields": [
+    {
+      "name": "orderId",
+      "type": "int"
+    }
+  ]
+}

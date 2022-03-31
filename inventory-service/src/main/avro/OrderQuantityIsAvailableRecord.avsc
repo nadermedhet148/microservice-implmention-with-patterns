@@ -1,0 +1,15 @@
+{
+  "namespace": "com.inventory.service",
+  "type": "record",
+  "name": "OrderQuantityIsAvailableRecord",
+  "fields": [
+    {
+      "name": "amount",
+      "type": "float"
+    },
+    {
+      "name": "orderId",
+      "type": "int"
+    }
+  ]
+}
