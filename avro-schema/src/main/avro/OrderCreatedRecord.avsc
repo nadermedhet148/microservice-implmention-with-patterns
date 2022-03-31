@@ -1,0 +1,19 @@
+{
+  "namespace": "com.order.service",
+  "type": "record",
+  "name": "OrderCheckingQuantityRecord",
+  "fields": [
+    {
+      "name": "productId",
+      "type": "int"
+    },
+    {
+      "name": "orderId",
+      "type": "int"
+    },
+    {
+      "name": "productQuantity",
+      "type": "int"
+    }
+  ]
+}

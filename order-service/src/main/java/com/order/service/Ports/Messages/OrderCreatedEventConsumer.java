@@ -1,8 +1,8 @@
 package com.order.service.Ports.Messages;
 
-import com.order.service.Domain.Events.OrderCheckingQuantityEvent;
-import com.order.service.OrderCheckingQuantityRecord;
+import com.avroSchema.OrderCheckingQuantityRecord;
 import com.order.service.infrastructure.EventProducers.Mappers.OrderCreatedEventMapper;
+import com.order.service.Domain.Events.OrderCheckingQuantityEvent;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 import lombok.extern.apachecommons.CommonsLog;
