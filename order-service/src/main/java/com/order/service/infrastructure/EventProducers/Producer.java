@@ -23,7 +23,7 @@ public class Producer implements IEventProducer<DomainEvent> {
   public void sendMessage(DomainEvent event) {
     SpecificRecordBase record =  new MapperFactory().getMappedRecord(event);
     this.kafkaTemplate.send(event.getEventName(), event.toString(), record  );
-    log.info(String.format("Produced order -> %s", record ));
+    log.info(String.format("Produced event -> %s  , %S",event.getEventName(), record ));
 
   }
 }
