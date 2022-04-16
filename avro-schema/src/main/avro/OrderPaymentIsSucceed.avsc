@@ -1,7 +1,7 @@
 {
   "namespace": "com.avroSchema",
   "type": "record",
-  "name": "OrderQuantityIsNotAvailableRecord",
+  "name": "OrderPaymentIsSucceedRecord",
   "fields": [
     {
       "name": "orderId",

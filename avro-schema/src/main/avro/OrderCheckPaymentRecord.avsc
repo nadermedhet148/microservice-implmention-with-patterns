@@ -1,15 +1,19 @@
 {
   "namespace": "com.avroSchema",
   "type": "record",
-  "name": "OrderQuantityIsAvailableRecord",
+  "name": "OrderCheckPaymentRecord",
   "fields": [
     {
-      "name": "amount",
-      "type": "float"
+      "name": "userId",
+      "type": "int"
     },
     {
       "name": "orderId",
       "type": "int"
+    },
+    {
+      "name": "amount",
+      "type": "float"
     }
   ]
 }

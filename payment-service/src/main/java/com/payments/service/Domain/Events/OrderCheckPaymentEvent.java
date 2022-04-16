@@ -1,4 +1,4 @@
-package com.order.service.Domain.Events;
+package com.payments.service.Domain.Events;
 
 import lombok.*;
 

@@ -1,5 +1,5 @@
 {
-  "namespace": "com.order.service",
+  "namespace": "com.avroSchema",
   "type": "record",
   "name": "OrderCheckingQuantityRecord",
   "fields": [

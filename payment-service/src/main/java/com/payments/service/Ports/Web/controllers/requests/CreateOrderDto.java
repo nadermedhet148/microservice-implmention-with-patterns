@@ -1,4 +1,4 @@
-package com.order.service.Ports.Web.controllers.requests;
+package com.payments.service.Ports.Web.controllers.requests;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,6 +15,5 @@ import javax.persistence.Id;
 @Setter
 public class CreateOrderDto {
     private Integer productId ;
-    private Integer userId;
     private Integer productQuantity;
 }

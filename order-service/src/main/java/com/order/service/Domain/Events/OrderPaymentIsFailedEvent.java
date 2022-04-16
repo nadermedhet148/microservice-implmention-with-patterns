@@ -8,10 +8,8 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderCheckPaymentEvent extends DomainEvent {
+public class OrderPaymentIsFailedEvent extends DomainEvent {
     public final String eventName = "OrderCheckPaymentEvent";
     private Integer orderId ;
-    private Integer userId ;
-    private Float amount ;
 
 }

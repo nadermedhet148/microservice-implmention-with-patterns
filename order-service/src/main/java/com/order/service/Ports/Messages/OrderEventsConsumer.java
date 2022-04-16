@@ -1,10 +1,16 @@
 package com.order.service.Ports.Messages;
 
+import com.avroSchema.OrderPaymentIsFailedRecord;
+import com.avroSchema.OrderPaymentIsSucceedRecord;
 import com.avroSchema.OrderQuantityIsAvailableRecord;
 import com.avroSchema.OrderQuantityIsNotAvailableRecord;
 import com.order.service.Aapplication.services.OrderService;
+import com.order.service.Domain.Events.OrderPaymentIsFailedEvent;
+import com.order.service.Domain.Events.OrderPaymentIsSucceedEvent;
 import com.order.service.Domain.Events.OrderQuantityIsAvailableEvent;
 import com.order.service.Domain.Events.OrderQuantityIsNotAvailableEvent;
+import com.order.service.infrastructure.EventProducers.Mappers.OrderPaymentIsFailedEventMapper;
+import com.order.service.infrastructure.EventProducers.Mappers.OrderPaymentIsSucceedEventMapper;
 import com.order.service.infrastructure.EventProducers.Mappers.OrderQuantityIsAvailableMapper;
 import com.order.service.infrastructure.EventProducers.Mappers.OrderQuantityIsNotAvailableMapper;
 import com.order.service.infrastructure.EventProducers.Producer;
@@ -47,5 +53,27 @@ public class OrderEventsConsumer {
     OrderQuantityIsNotAvailableEvent event = OrderQuantityIsNotAvailableMapper.INSTANCE.mapToEvent((OrderQuantityIsNotAvailableRecord) record);
     OrderService orderService = new OrderService(this.OrderRepository , this.producer);
     orderService.handelOrderQuantityIsNotAvailableEvent(event);
+  }
+  @KafkaListener(
+          topics = "OrderPaymentIsFailedEvent",
+          groupId = "simple-consumer"
+  )
+  @Transactional
+  public void consumeOrderPaymentIsFailedEvent(OrderPaymentIsFailedRecord record) {
+    log.info(String.format("Consumed OrderPaymentIsFailedEvent -> %s", record));
+    OrderPaymentIsFailedEvent event = OrderPaymentIsFailedEventMapper.INSTANCE.mapToEvent((OrderPaymentIsFailedRecord) record);
+    OrderService orderService = new OrderService(this.OrderRepository , this.producer);
+    orderService.handelOrderPaymentIsFailedEvent(event);
+  }
+  @KafkaListener(
+          topics = "OrderPaymentIsSucceedEvent",
+          groupId = "simple-consumer"
+  )
+  @Transactional
+  public void consumeOrderPaymentIsSucceedEvent(OrderPaymentIsSucceedRecord record) {
+    log.info(String.format("Consumed OrderPaymentIsSucceedEvent -> %s", record));
+    OrderPaymentIsSucceedEvent event = OrderPaymentIsSucceedEventMapper.INSTANCE.mapToEvent((OrderPaymentIsSucceedRecord) record);
+    OrderService orderService = new OrderService(this.OrderRepository , this.producer);
+    orderService.handelOrderPaymentIsSucceedEvent(event);
   }
 }

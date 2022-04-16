@@ -17,8 +17,8 @@ services:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
       PGADMIN_CONFIG_SERVER_MODE: 'False'
-    volumes:
-      - ./pgadmin:/var/lib/pgadmin:z
+#    volumes:
+#      - ./pgadmin:/var/lib/pgadmin:z
 
     ports:
       - "${PGADMIN_PORT:-5050}:80"
@@ -71,6 +71,7 @@ services:
       - 8085:8085
 volumes:
   pgadmin:
+    driver: local
   postgres:
     driver: local
 

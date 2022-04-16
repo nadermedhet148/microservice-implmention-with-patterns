@@ -27,6 +27,9 @@ public class Order {
     @Column(name = "productId")
     private Integer productId ;
 
+    @Column(name = "userId")
+    private Integer userId ;
+
     @Column(name = "productQuantity")
     private Integer productQuantity;
 
