@@ -4,7 +4,15 @@ topic:
   replication-factor: 3
 server:
   port: 9070
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+    preferIpAddress: true
 spring:
+  application:
+    name: inventory
   kafka:
     properties:
       bootstrap.servers: http://localhost:29092

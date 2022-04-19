@@ -1,7 +1,16 @@
-# microservice-implmention-with-patterns
+# microservice-implementation-with-patterns
 
-# first paatter is Sage pattern (Choreography-based) : 
+# first pattern is Sage pattern (Choreography-based) : 
 
 use-case :
 
-implmention : 
+implementation : 
+
+
+
+
+# second pattern is service discovery pattern : 
+
+use-case :
+
+implementation : 
