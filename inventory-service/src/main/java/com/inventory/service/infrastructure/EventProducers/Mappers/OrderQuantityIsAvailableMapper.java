@@ -1,7 +1,7 @@
 package com.inventory.service.infrastructure.EventProducers.Mappers;
 
+import com.avroSchema.OrderQuantityIsAvailableRecord;
 import com.inventory.service.Domain.Events.OrderQuantityIsAvailableEvent;
-import com.inventory.service.OrderQuantityIsAvailableRecord;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

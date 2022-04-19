@@ -1,8 +1,8 @@
 package com.inventory.service.infrastructure.EventProducers.Mappers;
 
 
+import com.avroSchema.OrderCheckingQuantityRecord;
 import com.inventory.service.Domain.Events.OrderCheckingQuantityEvent;
-import com.order.service.OrderCheckingQuantityRecord;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
