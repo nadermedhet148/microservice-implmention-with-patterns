@@ -1,6 +1,6 @@
 # microservice-implementation-with-patterns
 
-# first pattern is Sage pattern (Choreography-based) : 
+# First pattern is Sage pattern (Choreography-based) : 
 
 use-case :
 implement transactions that span services?
@@ -11,7 +11,7 @@ Implement each business transaction that spans multiple services is a saga. A sa
 
 
 
-# second pattern is service discovery pattern : 
+# Second pattern is service discovery pattern : 
 
 use-case :
 service discover the location of anthore service ?
@@ -20,7 +20,7 @@ implementation :
 
 When making a request to a service, the client makes a request via a router (a.k.a load balancer) that runs at a well known location. The router queries a service registry, which might be built into the router, and forwards the request to an available service instance.
 
-# third  pattern is CQRS pattern : 
+# Third  pattern is CQRS pattern : 
 
 use-case :
 implement a query that retrieves data from multiple services in a microservice architecture
