@@ -28,3 +28,12 @@ implement a query that retrieves data from multiple services in a microservice a
 implementation : 
 
 Define a view database, which is a read-only replica that is designed to support that query. The application keeps the replica up to data by subscribing to Domain events published by the service that own the data.
+
+# Forth pattern is event stream processing : 
+
+use-case :
+Event stream processing is often viewed as complementary to batch processing. Batch processing is about taking action on a large set of static data (“data at rest”), while event stream processing is about taking action on a constant flow of data (“data in motion”)
+
+implementation : 
+
+Event stream processing works by handling a data set by one data point at a time. Rather than view data as a whole set, event stream processing is about dealing with a flow of continuously created data. This requires a specialized set of technologies.
