@@ -1,4 +1,4 @@
-package com.ay.testlab.kafka.Domain.Models;
+package com.com.productReports.Domain.Models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

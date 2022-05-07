@@ -1,0 +1,15 @@
+{
+  "namespace": "com.avroSchema",
+  "type": "record",
+  "name": "ProductOrdersCountRecord",
+  "fields": [
+    {
+      "name": "productId",
+      "type": "int"
+    },
+    {
+      "name": "count",
+      "type": "int"
+    }
+  ]
+}

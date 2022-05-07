@@ -10,6 +10,15 @@ services:
       - 5432:5432
     volumes:
       - ./pgdata:/var/lib/postgresql/data:z
+  redis:
+    image: 'bitnami/redis:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_PORT_NUMBER=7000
+    ports:
+      - '7000:7000'
+    volumes:
+      - ./redata:/bitnami/redis/data:z
   pgadmin:
     container_name: pgadmin_container
     image: dpage/pgadmin4

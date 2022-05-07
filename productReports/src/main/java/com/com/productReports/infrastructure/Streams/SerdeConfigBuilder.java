@@ -1,4 +1,4 @@
-package com.ay.testlab.kafka.infrastructure.Streams;
+package com.com.productReports.infrastructure.Streams;
 
 import io.confluent.kafka.streams.serdes.avro.GenericAvroSerde;
 import io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde;

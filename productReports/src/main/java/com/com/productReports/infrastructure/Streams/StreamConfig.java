@@ -1,4 +1,4 @@
-package com.ay.testlab.kafka.infrastructure.Streams;
+package com.com.productReports.infrastructure.Streams;
 
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsConfig;

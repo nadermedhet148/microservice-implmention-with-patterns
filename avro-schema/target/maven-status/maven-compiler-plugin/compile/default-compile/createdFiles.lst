@@ -1,4 +1,6 @@
 com/avroSchema/OrderPaymentIsFailedRecord$Builder.class
+com/avroSchema/ProductOrdersCountRecord$1.class
+com/avroSchema/ProductOrdersCountRecord$Builder.class
 com/avroSchema/OrderPaymentIsFailedRecord.class
 com/avroSchema/OrderCheckingQuantityRecord.class
 com/avroSchema/OrderCheckingQuantityRecord$1.class
@@ -6,6 +8,7 @@ com/avroSchema/OrderPaymentIsSucceedRecord$1.class
 com/avroSchema/OrderQuantityIsAvailableRecord$1.class
 com/avroSchema/OrderPaymentIsSucceedRecord.class
 com/avroSchema/OrderCheckPaymentRecord$1.class
+com/avroSchema/ProductOrdersCountRecord.class
 com/avroSchema/OrderQuantityIsAvailableRecord.class
 com/avroSchema/OrderQuantityIsNotAvailableRecord$Builder.class
 com/avroSchema/OrderCheckingQuantityRecord$Builder.class

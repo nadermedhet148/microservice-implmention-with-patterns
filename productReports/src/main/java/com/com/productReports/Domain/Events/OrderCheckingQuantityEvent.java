@@ -1,4 +1,4 @@
-package com.ay.testlab.kafka.Domain.Events;
+package com.com.productReports.Domain.Events;
 
 import lombok.*;
 

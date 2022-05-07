@@ -1,0 +1,26 @@
+kafka:
+  bootstrap-servers: ${spring.embedded.kafka.brokers}
+  topic:
+    simpleMessageTopic: testingTopic2
+    multiPartitionTopic: dummy2
+    batchConsumerTopic: dummy2
+    streamRawDataTopic: dummy2
+    streamProcessedDataTopic: dummy2
+spring:
+  application:
+    name: products_reports
+
+  datasource:
+    username: root
+    url: jdbc:postgresql://localhost:5432/product_reports
+    driverClassName: org.postgresql.Driver
+    platform: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update # When you launch the application for the first time - switch "none" at "create"
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true

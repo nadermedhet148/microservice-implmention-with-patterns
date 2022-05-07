@@ -1,5 +1,5 @@
-package com.ay.testlab.kafka.infrastructure.repositories;
-import com.ay.testlab.kafka.Domain.Models.ProductOrdersCount;
+package com.com.productReports.infrastructure.repositories;
+import com.com.productReports.Domain.Models.ProductOrdersCount;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
