@@ -13,11 +13,13 @@ import com.inventory.service.infrastructure.Cache.ProductCacheManager;
 import com.inventory.service.infrastructure.repositories.IDuctedQuantityRepository;
 import com.inventory.service.infrastructure.repositories.IProductRepository;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
 @AllArgsConstructor
+@NoArgsConstructor
 public class ProductService {
 
     private  IEventProducer eventProducer;
@@ -32,7 +34,7 @@ public class ProductService {
 
 
     @Transactional
-    public void checkOrderProductQuantityAvailability(OrderCheckingQuantityEvent event){
+    public Product checkOrderProductQuantityAvailability(OrderCheckingQuantityEvent event){
 
         Product product = this.productRepository.getOne(event.getProductId());
 
@@ -46,11 +48,12 @@ public class ProductService {
             this.eventProducer.sendMessage(new OrderQuantityIsNotAvailableEvent(event.getOrderId()));
         }
 
+        return product;
 
     }
 
     @Transactional
-    public void revertDuctedQuantity(OrderPaymentIsFailedEvent event){
+    public Product revertDuctedQuantity(OrderPaymentIsFailedEvent event){
 
         Optional<DuctedQuantity> order = this.ductedQuantityRepository.findOneByOrderId(event.getOrderId());
         Product product = this.productRepository.getOne(order.get().getProductId());
@@ -58,7 +61,7 @@ public class ProductService {
         this.productRepository.save(product);
         productCache.put(product.getProductId() , product);
 
-
+        return  product;
 
 
     }
